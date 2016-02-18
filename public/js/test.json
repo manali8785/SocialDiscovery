@@ -1,0 +1,83 @@
+[
+  {
+    "name":"CA",
+    "size": 65
+  },
+  {
+    "name":"US",
+    "size":500
+  },
+  {
+    "name":"CU",
+    "size":55
+  },
+  {
+    "name":"BR",
+    "size":400
+  },
+  {
+    "name":"MX",
+    "Size":290
+  },
+  {
+    "name":"CP",
+    "size": 5
+  },
+  {
+    "name":"ZX",
+    "size": 20
+  },
+  {
+    "name":"CQ",
+    "size": 200
+  },
+  {
+    "name":"jj",
+    "size":110
+  },
+  {
+    "name":"NG",
+    "size":234
+  },
+  {
+    "name":"TT",
+    "size": 100
+  },
+  {
+    "name":"LL",
+    "size": 10
+  },
+  {
+    "name":"GG",
+    "size": 70
+  },
+  {
+    "name":"WW",
+    "size": 214
+  },
+  {
+    "name":"YY",
+    "size": 280
+  },
+  {
+    "name":"EE",
+    "size": 2
+  },
+  {
+    "name":"KK",
+    "size": 5
+  },
+  {
+    "name":"UU",
+    "size": 5
+  },
+  {
+    "name":"SS",
+    "size": 90
+  },
+  {
+    "name":"RR",
+    "size":8
+  }
+
+]

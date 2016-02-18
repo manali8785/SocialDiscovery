@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>D3 test</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="//d3js.org/d3.v3.min.js"></script>
+</head>
+<style>
+</style>
+    <body>
+         <svg id="svgContainer" width="600" height="600"></svg>
+    </body>
+<script>
+    var svgContainer = d3.select("#svgContainer");
+
+    var element0a = svgContainer.append("g").attr("class","node").attr("transform","translate(100,100)");
+    var element0b = element0a.append("rect").attr("x",0).attr("y",0).attr("width",20).attr("height",10).attr("fill","red");
+
+    var element1a = svgContainer.append("g").attr("class","node").attr("transform","translate(100,200)");
+    var element1b = element1a.append("rect").attr("x",0).attr("y",0).attr("width",20).attr("height",10).attr("fill","green");
+
+    var element2a = svgContainer.append("g").attr("class","node").attr("transform","translate(100,300)");
+    var element2b = element2a.append("rect").attr("x",0).attr("y",0).attr("width",20).attr("height",10).attr("fill","blue");
+
+    var nodeArray = new Array();
+    nodeArray[0] = { id : "000", label : "label 000", ui : element0a };
+    nodeArray[1] = { id : "001", label : "label 001", ui : element1a };
+    nodeArray[2] = { id : "002", label : "label 002", ui : element2a };
+
+    var linkArray = new Array();
+
+    console.log(nodeArray);
+
+    var force = self.force = d3.layout.force()
+            .nodes(nodeArray)
+            .links(linkArray)
+            .gravity(0.1)
+      //      .distance(80)
+            .charge(-100)
+            .size([600, 600])
+            .start();
+
+    var node = svgContainer.selectAll("g.node")
+            .data(nodeArray)
+            .call(force.drag);
+
+    console.log(node);
+    force.on("tick", function() {
+        node.attr("transform", function(d) {return "translate(" + d.x + "," + d.y + ")";});
+    });
+</script>
+</html>
